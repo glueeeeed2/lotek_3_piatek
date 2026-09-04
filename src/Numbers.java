@@ -1,29 +1,27 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Numbers {
 
 
 
-    public int[] draw() {
+    public ArrayList<Integer> draw() {
         Random random = new Random();
-        int[] array = new int[6];
-        boolean isExists = false;
+        ArrayList<Integer> array = new ArrayList<>();
 
-        for (int i = 0; i < array.length; i++)  {
+
+        while (array.size() < 6) {
+
             int randomNumber = random.nextInt(1,49);
-
-            for (int y = 0; y < array.length; y++) {
-                if (array[y] == randomNumber) {
-                    isExists = true;
-                    break;
-                }
+            if (array.contains(randomNumber)) {
+                continue;
             }
 
-            if (!isExists) {
-                array[i] = randomNumber;
-            }
+            array.add(randomNumber);
 
         }
+
         return array;
+
     }
 }

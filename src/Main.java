@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -5,13 +7,12 @@ public class Main {
 
         Numbers numbers = new Numbers();
 
-        int[] numbersArr = numbers.draw();
+        ArrayList<Integer> numbersList = numbers.draw();
 
-        System.out.println("Wylosowana tablica:");
 
-        for (int number : numbersArr) {
-            System.out.println(number);
-        }
+        System.out.println("Wylosowana lista:");
+
+        System.out.println(numbersList);
 
 
     }
