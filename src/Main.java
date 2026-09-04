@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -7,7 +8,7 @@ public class Main {
 
         Numbers numbers = new Numbers();
 
-        ArrayList<Integer> numbersList = numbers.draw();
+        HashSet<Integer> numbersList = numbers.draw();
 
 
         System.out.println("Wylosowana lista:");
