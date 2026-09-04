@@ -3,14 +3,14 @@
 public class Main {
     public static void main(String[] args) {
 
-        Losowanie losowanie = new Losowanie();
+        Numbers numbers = new Numbers();
 
-        int[] numbers = losowanie.losuj();
+        int[] numbersArr = numbers.draw();
 
         System.out.println("Wylosowana tablica:");
 
-        for (int liczba : numbers) {
-            System.out.println(liczba);
+        for (int number : numbersArr) {
+            System.out.println(number);
         }
 
 

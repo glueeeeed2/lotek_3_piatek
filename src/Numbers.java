@@ -1,10 +1,10 @@
 import java.util.Random;
 
-public class Losowanie {
+public class Numbers {
 
 
 
-    public int[] losuj() {
+    public int[] draw() {
         Random random = new Random();
         int[] array = new int[6];
         for (int i = 0; i < array.length; i++)  {
