@@ -36,7 +36,7 @@ public class Gra {
                }
            } catch (Exception e) {
                System.out.println("Wystapil blad.");
-               return;
+               sc.nextLine();
            }
 
         }
