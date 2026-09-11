@@ -7,6 +7,7 @@ public class Gra {
     private static boolean isGenerated = false;
     private static HashSet<Integer> generatedRandomNumbers = new HashSet<>();
     private static ArrayList<Integer> givenNumbers = new ArrayList<>();
+    private static ArrayList<Integer> winningNumbers = new ArrayList<>();
 
 
     public Gra() {
@@ -35,10 +36,27 @@ public class Gra {
                }
            } catch (Exception e) {
                System.out.println("Wystapil blad.");
+               return;
            }
 
         }
 
+        checkWinningNumbers();
+
+        System.out.println("Trafiono " + winningNumbers.size() + " liczb");
+        System.out.println("Trafione liczby: ");
+        for (Integer winningNumber : winningNumbers) {
+            System.out.println(winningNumber);
+        }
+
+    }
+
+    private void checkWinningNumbers() {
+        for (Integer number : givenNumbers) {
+            if (generatedRandomNumbers.contains(number)){
+                winningNumbers.add(number);
+            }
+        }
     }
 
     public  HashSet<Integer> getGeneratedRandomNumbers() {
